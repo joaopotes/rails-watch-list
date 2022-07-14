@@ -1,3 +1,5 @@
+
+<%= image_tag "logo.png", alt: "Le Wagon", width: 200 %>
 <h1>Save all your movies</h1>
 
 <h3>My Lists</h3>
@@ -5,3 +7,21 @@
 <% @lists.each do |list| %>
   <h5><%= link_to list.name, list_path(list.id) %></h5>
 <% end %>
+
+<div class="card-index">
+  <div class="card-index-infos">
+    <div>
+      <h1>Save all your movies</h1>
+      <h2>My lists:</h2>
+      <% @lists.each do |list| %>
+        <h3> <%= link_to list.name, list_path(list.id) %> </h3>
+      <% end %>
+      <%= link_to "Create a movie list", new_list_path, class: "btn btn-ghost" %>
+    </div>
+    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-index-user avatar-bordered" />
+  </div>
+</div>
+
+<%= link_to "Create a movie list >", new_list_path, class: "btn btn-ghost" %>
+
+<a class="btn btn-ghost" href="#">Write a story</a>

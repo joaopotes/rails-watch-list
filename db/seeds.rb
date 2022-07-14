@@ -15,6 +15,7 @@ movies = JSON.parse(user_serialized)["results"].first(20)
 
 
 puts "cleaning up database"
+Bookmark.destroy_all
 Movie.destroy_all
 puts "database is clean"
 
